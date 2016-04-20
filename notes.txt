@@ -1,0 +1,38 @@
+Milestone #3 due next Monday night
+Proposal:
+I) Goal
+II) Input/output (Data analysis - plots, simulation - animations)
+III) Numerical methods
+
+Plotting! (see https://github.com/physics91si/lectures/blob/master/Lecture07_Slideshow.ipynb)
+Unfortunately, your hard work means nothing if your data isn't presented aesthetically.
+
+Basics of plotting:
+- Subplots, sizes, colors, opacity, styles
+- Legends, labels, colormaps, colorbars
+- Text, order-of-plotting
+
+Standard line graph
+x=np.arange(20)
+y=np.arange(5)
+plt.plot(x,y)
+
+You can plot two curves at once
+You can specify thickness of lines, order in which lines are plotted, colors and styles via Line2D properties
+
+There are certain shortcuts in matplotlib.pyplot for plotting color and style
+plt.plot(x,y, 'r:', x, y1, 'b--')
+plt.show()
+
+By specifying a 'marker' style, you can emphasize your data points
+By specifying only a marker style, you get something that looks like a scatter plot
+
+Here's the actual way to get a scatter plot: plt.scatter(x,y,marker='v'), plt.show()
+
+You can also give your data points error bars: plt.errorbar(x,y,xerr=0.1,yerr=0.05, ecolor='red', fmt='none') #fmt=format
+
+You can combine shortcuts for colors and markers for plt.plot, but you can't use shortcuts for plt.scatter which means that each scatter plot deserves its own line of code
+
+You can put multiple plots on the same set of axes!
+
+You can put multiple plots on different subplots; set titles
